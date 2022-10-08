@@ -12,6 +12,8 @@ Since only `npx` is being used there is no need to `npm install` anything
 **Production**
 `npm run build`
 
+Staged on Github Pages here: https://newmediaarts.github.io/nma_v4/
+
 ## Create New Custom Elements
 
 1. Create the `template` tag markup for the element in `views/elements`
