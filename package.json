@@ -1,0 +1,13 @@
+{
+	"name": "11ty-scripts-only",
+	"version": "0.0.1",
+	"description": "11ty starter using only npm scripts and vanilla web components",
+	"main": "index.js",
+	"scripts": {
+		"watch:sass": "npx sass --load-path=src/scss src/scss:_site/css --watch",
+		"prod:sass": "npx sass --load-path=src/scss src/scss:_site/css",
+		"dev": "npx concurrently \"npx @11ty/eleventy --serve\" \"npm run watch:sass\""
+	},
+	"author": "frrbox",
+	"license": "MIT"
+}

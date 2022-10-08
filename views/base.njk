@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{[title]}</title>
+  <base href="/">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  {% include "./components/header.njk" %}
+
+  <main data-template="{{template}}">
+    {% include "./components/partials.njk" %}
+  </main>
+
+ {% include "./components/footer.njk" %} 
+
+ {# Render all the templates for custom elements #}
+ {% for file in  allElementTemplates  %}
+   {% include "./elements/" + file %}
+ {% endfor %}
+
+ <script src="/js/main.js" type="module"></script>
+</body>
+</html>
