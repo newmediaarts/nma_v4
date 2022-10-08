@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>{[title]}</title>
+    <title>
+      {% if page_title %}{{page_title}} | {% endif %}{{meta.title}}</title>
     <base href="/">
     <link rel="stylesheet" href="{{'/css/main.css' | url}}">
   </head>
