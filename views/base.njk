@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>{[title]}</title>
     <base href="/">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
     {% include "./components/header.njk" %}
@@ -20,6 +20,6 @@
       {% include "./elements/" + file %}
     {% endfor %}
 
-    <script src="js/main.js" type="module"></script>
+    <script src="/js/main.js" type="module"></script>
   </body>
 </html>
