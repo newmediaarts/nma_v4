@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>{[title]}</title>
+    <base href="/">
+    <link rel="stylesheet" href="/nma_v4/css/main.css">
+  </head>
+  <body>
+    <header class="header">
+  Nav global data from 'data/nav.json': <br/>  {&quot;links&quot;:[{&quot;label&quot;:&quot;home&quot;,&quot;url&quot;:&quot;/&quot;}]}
+</header>
+
+
+    <main data-template="">
+      
+  <div class="single-column">
+  <nma-text-stack 
+    headline="Welcome to the homepage" 
+    body="&lt;p&gt;This is rendered using a web component. You can read more about it &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Web_Components&quot; aria-label=&quot;Learn more about web component on MDN&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+"
+    ></nma-text-stack>
+</div> 
+
+
+    </main>
+
+    <footer class="footer">This is the footer</footer>
+
+
+    
+    
+      <template id="text-stack-template">
+  <h3 part="headline" class="text-stack__headline"></h3>
+  <div part="body" class="text-stack__body"></div>
+</template>
+    
+
+    <script src="/nma_v4/js/main.js" type="module"></script>
+  </body>
+</html>
