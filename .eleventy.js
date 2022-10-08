@@ -5,7 +5,6 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addWatchTarget("src");
 
 	return {
-		pathPrefix: '/_site',
 		dir: {
 			input: "./pages",
 			layouts: "../views",
