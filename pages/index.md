@@ -1,5 +1,6 @@
 ---
 layout: base.njk
+page_title: Home
 partials:
   - id: single-column
     headline: Welcome to the homepage
