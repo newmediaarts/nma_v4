@@ -37,7 +37,7 @@ The design tokens are managed in the `tokens.json` file. You can update the file
 ## Creating Pages
 
 11ty uses file based routing, by creating a file in the `pages` folder with a certain name it will create a route for it.
-There are some important properties that each page contains:
+There are some important properties that each page contains.
 
 - `layout` - Will create the page using the file. For most cases set this to `base.njk`
 - `page_title` (optional) - The value used in the `<title>` tag. (example: `page_title: Home` will create the meta title of `Home | NMA`)
