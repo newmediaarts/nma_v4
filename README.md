@@ -50,8 +50,8 @@ Here are a couple of important files to know about:
 `views/partials/*.njk` - All files in this directory will be parsed and rendered by the `views/components/partials.njk` file.
 `page/**/*.md` - All files in the `pages` directory have a `partials` list that multiple partials can be added to.
 
-NOTE: When building partials the `type` property is required and will be used to map to the correct file in the `views/partials` directory.
-So if your partial `type` is `slideshow` you must also have a file in `views/partials/slideshow.njk`
+**NOTE: When building partials the `type` property is required and will be used to map to the correct file in the `views/partials` directory.
+So if your partial `type` is `slideshow` you must also have a file in `views/partials/slideshow.njk`**
 
 **Example**
 `page/index.md` - This will be the homepage
