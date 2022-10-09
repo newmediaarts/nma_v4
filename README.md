@@ -7,7 +7,7 @@ An eleventy starter using only npx. Built with Sass and Vanilla Web Components.
 - [Get Started](#get-started)
 - [Design Tokens](#design-tokens)
 - [Creating Custom Elements](#create-custom-elements)
-- [Creating Pages]
+- [Creating Pages](#creating-pages)
 
 ## Get Started
 
