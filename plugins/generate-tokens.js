@@ -13,7 +13,12 @@ function readTokenFile() {
 }
 
 function createTokens(tokenData) {
-  let tokens = [];
+  let tokens = [
+    `/* ------------------------------------------------------------------------------------ 
+    THIS IS AUTOMATICALLY GENERATED. IF YOU NEED TO CHANGE / UPDATE TOKENS USE THE JSON FILE 
+------------------------------------------------------------------------------------------ */`,
+    '',
+  ];
 
   // The first nested element in the json (ex. color)
   const tokenPrefixes = Object.keys(tokenData);
