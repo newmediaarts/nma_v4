@@ -9,7 +9,8 @@
     "watch:scripts": "npx esbuild src/js/main.js --outfile=_site/js/main.js --bundle --watch",
     "prod:scripts": "npx esbuild src/js/main.js --outfile=_site/js/main.js --bundle",
     "dev": "npx concurrently \"npx @11ty/eleventy --serve\" \"npm run watch:sass\" \"npm run watch:scripts\"",
-    "build": "env NODE_ENV=production npx concurrently \"npx @11ty/eleventy --pathprefix 'nma_v4'\" \"npm run prod:sass\" \"npm run prod:scripts\""
+    "build": "env NODE_ENV=production npx concurrently \"npx @11ty/eleventy --pathprefix 'nma_v4'\" \"npm run prod:sass\" \"npm run prod:scripts\"",
+    "tokens": "node ./plugins/generate-tokens.js"
   },
   "author": "newmediaarts",
   "license": "MIT"
