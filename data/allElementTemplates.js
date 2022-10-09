@@ -3,13 +3,13 @@
  * to loop through and render
  * */
 
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
 
 module.exports = () => {
-	const elementsDir = fs.readdirSync(
-		path.resolve(process.cwd(), "views/elements")
-	);
+  const elementsDir = fs.readdirSync(
+    path.resolve(process.cwd(), 'views/elements')
+  );
 
-	return elementsDir;
+  return elementsDir;
 };
