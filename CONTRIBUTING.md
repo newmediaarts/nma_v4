@@ -30,7 +30,7 @@ If you are using VSCode you can install the following plugins to help with the d
 - [Sass](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented)
 - [JS Snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
 
-Adding the following to the editors `settings.json` file will enable formatting
+Adding the following to the VS Code (editor) workspace settings `settings.json` file will enable formatting
 
 ```json
   "editor.formatOnSave": true,
