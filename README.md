@@ -12,7 +12,7 @@ An eleventy starter using only npx. Built with Sass and Vanilla Web Components.
 ## Get Started
 
 Since only `npx` is being used there is no need to `npm install` anything.
-Before starting please reference the [Contributing Doc](/CONTRIBUTING.MD).
+Before starting please reference the [Contributing Doc](/CONTRIBUTING.md).
 
 ### Development
 
