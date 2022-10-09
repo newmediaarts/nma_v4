@@ -1,8 +1,8 @@
 {
-	"links": [
-		{
-			"label": "home",
-			"url": "/"
-		}
-	]
+  "links": [
+    {
+      "label": "home",
+      "url": "/"
+    }
+  ]
 }
