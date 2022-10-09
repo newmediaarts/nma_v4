@@ -2,12 +2,12 @@
   {% if partial.backgroundImage %}
     <nma-picture
       {% if partial.backgroundImage.mobile %}
-        mobile="{{partial.backgroundImage.mobile}}" 
+        mobile="{{partial.backgroundImage.mobile | url}}" 
       {% endif %}
       {% if partial.backgroundImage.tablet %}
-        tablet="{{partial.backgroundImage.tablet }}" 
+        tablet="{{partial.backgroundImage.tablet | url }}" 
       {% endif %}
-      src="{{partial.backgroundImage.src}}" 
+      src="{{partial.backgroundImage.src | url}}" 
       alt="{{partial.backgroundImage.alt}}"
     ></nma-picture>
   {% endif %}
