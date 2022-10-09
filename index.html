@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>
       Home | KCC NMA</title>
     <base href="/">
@@ -16,10 +17,31 @@
     <main data-template="">
       
   <div class="single-column">
+  
+
   <nma-text-stack 
-    headline="Welcome to the homepage" 
-    body="&lt;p&gt;This is rendered using a web component. You can read more about it &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Web_Components&quot; aria-label=&quot;Learn more about web component on MDN&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-"
+    headline="Animation &amp; Interface Design" 
+    body="The New Media Arts (NMA) program is a two year AS degree program located at Kapi‘olani Community College (KCC) in Honolulu, Hawaii. The NMA mission is to prepare students for employment in the fields of interface design and animation."
+    ></nma-text-stack>
+</div>
+
+  <div class="single-column">
+  
+    <nma-picture
+      
+        mobile="/assets/test-image-2.jpg" 
+      
+      
+        tablet="/assets/test-image-3.jpg" 
+      
+      src="/assets/test-image.jpg" 
+      alt="This is a test image"
+    ></nma-picture>
+  
+
+  <nma-text-stack 
+    headline="NMA Student Show" 
+    body="Check out the student portfolios &amp; demo reels from recent NMA graduates."
     ></nma-text-stack>
 </div>
 
@@ -28,6 +50,17 @@
     <footer class="footer">This is the footer</footer>
 
     
+    
+      <template id="picture-template">
+    <style>
+        img {
+            width: var(--nma-image-width, 100%);
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <picture part="picture"></picture>
+</template>
     
       <template id="text-stack-template">
   <h3 part="headline" class="text-stack__headline"></h3>
