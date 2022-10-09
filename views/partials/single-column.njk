@@ -1,4 +1,17 @@
 <div class="{{partial.type}}">
+  {% if partial.backgroundImage %}
+    <nma-picture
+      {% if partial.backgroundImage.mobile %}
+        mobile="{{partial.backgroundImage.mobile}}" 
+      {% endif %}
+      {% if partial.backgroundImage.tablet %}
+        tablet="{{partial.backgroundImage.tablet }}" 
+      {% endif %}
+      src="{{partial.backgroundImage.src}}" 
+      alt="{{partial.backgroundImage.alt}}"
+    ></nma-picture>
+  {% endif %}
+
   <nma-text-stack 
     {% if partial.headline %}headline="{{partial.headline}}"{% endif %} 
     {% if partial.body %}body="{{partial.body}}"{% endif %}
