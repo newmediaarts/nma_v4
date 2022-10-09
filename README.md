@@ -14,10 +14,10 @@ An eleventy starter using only npx. Built with Sass and Vanilla Web Components.
 Since only `npx` is being used there is no need to `npm install` anything.
 Before starting please reference the [Contributing Doc](/CONTRIBUTING.MD).
 
-**Development**
+Development
 `npm run dev`
 
-**Production**
+Production
 `npm run build`
 
 Staged on Github Pages here: https://newmediaarts.github.io/nma_v4/
