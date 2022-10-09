@@ -6,8 +6,10 @@
   "scripts": {
     "watch:sass": "npx sass --load-path=src/scss src/scss:_site/css --watch",
     "prod:sass": "npx sass --load-path=src/scss src/scss:_site/css",
-    "dev": "npx concurrently \"npx @11ty/eleventy --serve\" \"npm run watch:sass\"",
-    "build": "env NODE_ENV=production npx concurrently \"npx @11ty/eleventy --pathprefix 'nma_v4'\" \"npm run prod:sass\""
+    "watch:scripts": "npx esbuild src/js/main.js --outfile=_site/js/main.js --bundle --watch",
+    "prod:scripts": "npx esbuild src/js/main.js --outfile=_site/js/main.js --bundle",
+    "dev": "npx concurrently \"npx @11ty/eleventy --serve\" \"npm run watch:sass\" \"npm run watch:scripts\"",
+    "build": "env NODE_ENV=production npx concurrently \"npx @11ty/eleventy --pathprefix 'nma_v4'\" \"npm run prod:sass\" \"npm run prod:scripts\""
   },
   "author": "newmediaarts",
   "license": "MIT"

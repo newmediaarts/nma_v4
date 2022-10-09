@@ -1,10 +1,10 @@
 // Custom Elements
-import './elements/text-stack.js';
+import './elements/text-stack';
 
 // Other app logic can go here
 class App {
   constructor() {
-    console.log('Hello');
+    console.log('Hello this is using esbuild');
   }
 }
 
