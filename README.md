@@ -53,7 +53,8 @@ Here are a couple of important files to know about:
 **NOTE: When building partials the `type` property is required and will be used to map to the correct file in the `views/partials` directory.
 So if your partial `type` is `slideshow` you must also have a file in `views/partials/slideshow.njk`**
 
-**Example**
+### Example
+
 `page/index.md` - This will be the homepage
 
 ```yaml
