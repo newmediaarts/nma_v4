@@ -37,7 +37,7 @@ The design tokens are managed in the `tokens.json` file. You can update the file
 ## Creating Pages
 
 11ty uses file based routing, by creating a file in the `pages` folder with a certain name it will create a route for it.
-There are some important properties that each page contains.
+There are some important properties that each page contains:
 
 - `layout` - Will create the page using the file. For most cases set this to `base.njk`
 - `page_title` (optional) - The value used in the `<title>` tag. (example: `page_title: Home` will create the meta title of `Home | NMA`)
@@ -48,9 +48,10 @@ There are some important properties that each page contains.
 These are the blocks to build your site with. This site uses a component based approach so image a partial as a individual re-usable piece that can be used throughout different pages.
 
 Here are a couple of important files to know about:
-`views/components/partials.njk` - Loops through all paritals and renders them to the pages
-`views/partials/*.njk` - All files in this directory will be parsed and rendered by the `views/components/partials.njk` file.
-`page/**/*.md` - All files in the `pages` directory have a `partials` list that multiple partials can be added to.
+
+- `views/components/partials.njk` - Loops through all paritals and renders them to the pages
+- `views/partials/*.njk` - All files in this directory will be parsed and rendered by the `views/components/partials.njk` file.
+- `page/**/*.md` - All files in the `pages` directory have a `partials` list that multiple partials can be added to.
 
 **NOTE: When building partials the `type` property is required and will be used to map to the correct file in the `views/partials` directory.
 So if your partial `type` is `slideshow` you must also have a file in `views/partials/slideshow.njk`**
