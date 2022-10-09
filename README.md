@@ -21,7 +21,7 @@ Before starting please reference the [Contributing Doc](/CONTRIBUTING.MD).
 
 Staged on Github Pages here: https://newmediaarts.github.io/nma_v4/
 
-# Design Tokens
+## Design Tokens
 
 The design tokens are managed in the `tokens.json` file. You can update the file and run `npm run tokens`. It will parse the file and create SCSS variables and write them to the `src/scss/tokens.scss` file. NOTE: Everytime you run this command it will re-write the whole file. So don't update this file manually, instead manage all tokens in the json file.
 
