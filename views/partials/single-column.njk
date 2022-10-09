@@ -1,6 +1,7 @@
 <div class="{{partial.type}}">
   {% if partial.backgroundImage %}
-    <nma-picture
+    <div class="single-column__bg">
+      <nma-picture
       {% if partial.backgroundImage.mobile %}
         mobile="{{partial.backgroundImage.mobile | url}}" 
       {% endif %}
@@ -9,7 +10,8 @@
       {% endif %}
       src="{{partial.backgroundImage.src | url}}" 
       alt="{{partial.backgroundImage.alt}}"
-    ></nma-picture>
+      ></nma-picture>
+    </div>
   {% endif %}
 
   <nma-text-stack 
