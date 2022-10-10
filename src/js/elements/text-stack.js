@@ -19,22 +19,6 @@ class Stack extends HTMLElement {
     this.body.innerHTML = this.bodyAttribute;
   }
 
-  // This method is called when the element in inserted into the document
-  connectedCallback() {}
-
-  // This method is called when the element is removed from the document
-  disconnectedCallback() {}
-
-  // Where we list attributes that should be observed
-  static get observedAttributes() {}
-
-  // Runs when one of the observed attributes changes
-  attributeChangedCallback(attrName, oldVal, newVal) {}
-
-  // Calls when the element is moved to a new document
-  // Very rarely used
-  adoptedCallback() {}
-
   // To use an attribute you need a getter and/or setter
   get headlineAttribute() {
     return this.getAttribute('headline');
