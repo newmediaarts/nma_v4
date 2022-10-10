@@ -5,6 +5,8 @@ partials:
   - type: single-column
     headline: Animation & Interface Design
     body: The New Media Arts (NMA) program is a two year AS degree program located at Kapi‘olani Community College (KCC) in Honolulu, Hawaii. The NMA mission is to prepare students for employment in the fields of interface design and animation.
+    variants:
+      - hero
 
   - type: single-column
     headline: NMA Student Show
