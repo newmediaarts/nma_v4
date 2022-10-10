@@ -1,0 +1,24 @@
+{% macro render(data) %}
+    {# The default element will be a button unless a url is specified #}
+    {% set tag = 'button' %}
+
+    {% if data.url %}
+        {% set tag = 'a' %}
+    {% endif %}
+
+    <{{tag}} 
+        class="button{% for variant in data.variants %} button--{{variant}} {%- endfor %}" 
+        {% if data.url %}href="{{data.url | url}}"{% endif %}
+        {% if data.ariaLabel %}aria-label="{{data.ariaLabel}}"{% endif %}
+        {% if data.target == '_blank' %}
+           target="_blank" 
+           rel="noreferrer"
+        {% endif %}
+        >
+        {% if data.visuallyHidden %}
+            <span class="visually-hidden">{{data.label}}</span>
+        {% else %}
+            {{data.label}}
+        {% endif %}
+    </{{tag}}>
+{% endmacro %}
