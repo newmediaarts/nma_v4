@@ -1,4 +1,4 @@
-<div class="{{partial.type}}">
+<div class="{{partial.type}}{% for variant in partial.variants %} {{partial.type}}--{{variant}} {%- endfor %}">
   {% if partial.backgroundImage %}
     <div class="single-column__bg">
       <nma-picture
