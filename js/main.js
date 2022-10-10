@@ -12,16 +12,6 @@
       this.body = this.shadowRoot.querySelector(".text-stack__body");
       this.body.innerHTML = this.bodyAttribute;
     }
-    connectedCallback() {
-    }
-    disconnectedCallback() {
-    }
-    static get observedAttributes() {
-    }
-    attributeChangedCallback(attrName, oldVal, newVal) {
-    }
-    adoptedCallback() {
-    }
     get headlineAttribute() {
       return this.getAttribute("headline");
     }
