@@ -16,16 +16,67 @@
 
     <main data-template="">
       
-  <div class="single-column single-column--hero">
+  
+
+<div class="single-column single-column--hero">
   
 
   <nma-text-stack 
     headline="Animation &amp; Interface Design" 
     body="The New Media Arts (NMA) program is a two year AS degree program located at Kapi‘olani Community College (KCC) in Honolulu, Hawaii. The NMA mission is to prepare students for employment in the fields of interface design and animation."
-    ></nma-text-stack>
+    >
+    <div slot="buttons">
+      
+        
+    
+    
+
+    
+        
+    
+
+    <a 
+        class="button" 
+        href="#"
+        
+        
+        >
+        
+            NMA DEGREE INFO
+        
+    </a>
+
+      
+        
+    
+    
+
+    
+        
+    
+
+    <a 
+        class="button button--dark" 
+        href="https://google.com"
+        
+        
+           target="_blank" 
+           rel="noreferrer"
+        
+        >
+        
+            MEET THE FACULTY
+        
+    </a>
+
+      
+    </div>
+  </nma-text-stack>
 </div>
 
-  <div class="single-column">
+  
+
+<div class="single-column">
   
     <div class="single-column__bg">
       <nma-picture
@@ -44,7 +95,11 @@
   <nma-text-stack 
     headline="NMA Student Show" 
     body="Check out the student portfolios &amp; demo reels from recent NMA graduates."
-    ></nma-text-stack>
+    >
+    <div slot="buttons">
+      
+    </div>
+  </nma-text-stack>
 </div>
 
     </main>
@@ -67,6 +122,7 @@
       <template id="text-stack-template">
   <h3 part="headline" class="text-stack__headline"></h3>
   <div part="body" class="text-stack__body"></div>
+  <slot name="buttons"/>
 </template>
     
 
