@@ -1,5 +1,4 @@
 // Custom Elements
-import './elements/text-stack';
 import './elements/picture';
 
 // Other app logic can go here
