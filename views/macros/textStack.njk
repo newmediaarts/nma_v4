@@ -1,0 +1,34 @@
+{% import './button.njk' as button with context %}
+
+{% macro render(data) %}
+    {% set class = 'text-stack' %}
+    {% set headingLevel = 2 %}
+
+    {% if data.class %}
+        {% set class = data.class %}
+    {% endif %}
+
+    {% if data.headingLevel %}
+        {% set headingLevel = data.headingLevel %}
+    {% endif %}
+
+    <div class="{{class}}{% for variant in data.variants %} {{class}}--{{variant}} {%- endfor%} ">
+        {% if data.runningHead %}
+            <div>{{data.runningHead}}</div>
+        {% endif %}
+
+        <h{{headingLevel}} class="{{class}}__headline">{{data.headline}}</h{{headingLevel}}>
+
+        {% if data.body %}
+            <div class="{{class}}__content">{{data.body | safe}}</div>
+        {% endif %}
+
+        {% if data.buttons %}
+            <div class="{{class}}__buttons">
+                {% for item in data.buttons %}
+                    {{button.render(item)}}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+{% endmacro %}
