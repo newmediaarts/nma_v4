@@ -1,3 +1,5 @@
+{% import "../macros/button.njk" as button %}
+
 <div class="{{partial.type}}{% for variant in partial.variants %} {{partial.type}}--{{variant}} {%- endfor %}">
   {% if partial.backgroundImage %}
     <div class="single-column__bg">
@@ -17,5 +19,11 @@
   <nma-text-stack 
     {% if partial.headline %}headline="{{partial.headline}}"{% endif %} 
     {% if partial.body %}body="{{partial.body}}"{% endif %}
-    ></nma-text-stack>
+    >
+    <div slot="buttons">
+      {% for link in partial.links %}
+        {{button.render(link)}}
+      {% endfor %}
+    </div>
+  </nma-text-stack>
 </div>
