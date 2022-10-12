@@ -20,7 +20,7 @@ Before starting please reference the [Contributing Doc](/CONTRIBUTING.md).
 
 ### Production
 
-`npm run build`
+`npm run production`
 
 Staged on Github Pages here: https://newmediaarts.github.io/nma_v4/
 

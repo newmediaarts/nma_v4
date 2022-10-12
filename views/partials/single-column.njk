@@ -1,4 +1,4 @@
-{% import "../macros/button.njk" as button %}
+{% import "../macros/textStack.njk" as textStack with context %}
 
 <div class="{{partial.type}}{% for variant in partial.variants %} {{partial.type}}--{{variant}} {%- endfor %}">
   {% if partial.backgroundImage %}
@@ -16,14 +16,5 @@
     </div>
   {% endif %}
 
-  <nma-text-stack 
-    {% if partial.headline %}headline="{{partial.headline}}"{% endif %} 
-    {% if partial.body %}body="{{partial.body}}"{% endif %}
-    >
-    <div slot="buttons">
-      {% for link in partial.links %}
-        {{button.render(link)}}
-      {% endfor %}
-    </div>
-  </nma-text-stack>
+  {{textStack.render(partial)}}
 </div>
