@@ -1,13 +1,247 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 /* ------------------------------------------------------------------------------------ 
     THIS IS AUTOMATICALLY GENERATED. IF YOU NEED TO CHANGE / UPDATE TOKENS USE THE JSON FILE 
 ------------------------------------------------------------------------------------------ */
 /* color */
 /* breakpoints */
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background: #fff;
+/* easings */
+/* type */
+/* grid */
+h1 {
+  --type-style: Heading One Mobile;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.1px;
+}
+@media (min-width: 1200px) {
+  h1 {
+    --type-style: Heading One Desktop;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0.1px;
+  }
+}
+
+h2 {
+  --type-style: Heading Two Mobile;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+}
+@media (min-width: 1200px) {
+  h2 {
+    --type-style: Heading Two Desktop;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+}
+
+/* ------------------------------------------------------------------------------------ 
+    THIS IS AUTOMATICALLY GENERATED. IF YOU NEED TO CHANGE / UPDATE TOKENS USE THE JSON FILE 
+------------------------------------------------------------------------------------------ */
+/* color */
+/* breakpoints */
+/* easings */
+/* type */
+/* grid */
+.asset-5050 {
+  --first-element-columns: 1 / -1;
+  --second-element-columns: 1 / -1;
+  --status: var(--grid-breakpoint-label);
+  --grid-breakpoint-label: base;
+  --grid-column-count: 4;
+  --grid-column-gap: 20px;
+  --grid-container-max-width: 500px;
+  --grid-outer-padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(var(--grid-column-count), 1fr);
+  grid-gap: var(--grid-column-gap);
+  max-width: var(--grid-container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--grid-outer-padding);
+  padding-right: var(--grid-outer-padding);
+}
+@media (min-width: 1024px) {
+  .asset-5050 {
+    --first-element-columns: 1 / 7;
+    --first-element-row: 1;
+    --second-element-columns: 7 / -1;
+    --second-element-row: 1;
+  }
+}
+@media (min-width: 1024px) {
+  .asset-5050 {
+    --grid-breakpoint-label: tablet;
+    --grid-column-count: 12;
+    --grid-column-gap: 40px;
+    --grid-container-max-width: 900px;
+    --grid-outer-padding: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .asset-5050 {
+    --grid-breakpoint-label: laptop;
+    --grid-container-max-width: 1200px;
+  }
+}
+@media (min-width: 1440px) {
+  .asset-5050 {
+    --grid-breakpoint-label: desktop;
+    --grid-container-max-width: 1400px;
+  }
+}
+.asset-5050 :first-child {
+  grid-column: var(--first-element-columns);
+  grid-row: var(--first-element-row, initial);
+}
+.asset-5050 :nth-child(2) {
+  grid-column: var(--second-element-columns);
+  grid-row: var(--second-element-row, initial);
+}
+
+/* ------------------------------------------------------------------------------------ 
+    THIS IS AUTOMATICALLY GENERATED. IF YOU NEED TO CHANGE / UPDATE TOKENS USE THE JSON FILE 
+------------------------------------------------------------------------------------------ */
+/* color */
+/* breakpoints */
+/* easings */
+/* type */
+/* grid */
+.single-column {
+  --status: var(--grid-breakpoint-label);
+  --grid-breakpoint-label: base;
+  --grid-column-count: 4;
+  --grid-column-gap: 20px;
+  --grid-container-max-width: 500px;
+  --grid-outer-padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(var(--grid-column-count), 1fr);
+  grid-gap: var(--grid-column-gap);
+  max-width: var(--grid-container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--grid-outer-padding);
+  padding-right: var(--grid-outer-padding);
+  position: relative;
+  align-items: center;
+  min-height: var(--single-column-min-height, auto);
+}
+@media (min-width: 1024px) {
+  .single-column {
+    --grid-breakpoint-label: tablet;
+    --grid-column-count: 12;
+    --grid-column-gap: 40px;
+    --grid-container-max-width: 900px;
+    --grid-outer-padding: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .single-column {
+    --grid-breakpoint-label: laptop;
+    --grid-container-max-width: 1200px;
+  }
+}
+@media (min-width: 1440px) {
+  .single-column {
+    --grid-breakpoint-label: desktop;
+    --grid-container-max-width: 1400px;
+  }
+}
+
+.single-column__bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.single-column__bg nma-picture::part(image) {
+  height: 100%;
+  object-fit: cover;
+}
+
+.single-column .text-stack {
+  grid-column: 2/12;
 }
 
 /*# sourceMappingURL=main.css.map */
