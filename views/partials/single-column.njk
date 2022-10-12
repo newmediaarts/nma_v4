@@ -1,6 +1,11 @@
 {% import "../macros/textStack.njk" as textStack with context %}
 
-<div class="{{partial.type}}{% for variant in partial.variants %} {{partial.type}}--{{variant}} {%- endfor %}">
+<div 
+class="{{partial.type}}{% for variant in partial.variants %} {{partial.type}}--{{variant}} {%- endfor %}"
+{% if partial.minHeight %}
+  style="--single-column-min-height: {{partial.minHeight}}"
+{% endif %}
+>
   {% if partial.backgroundImage %}
     <div class="single-column__bg">
       <nma-picture
