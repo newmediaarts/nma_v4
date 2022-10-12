@@ -1,4 +1,14 @@
-<header class="header">
-  Nav global data from 'data/nav.json': <br/>
-  {{nav | dump}}
+<header class="site-header">
+  <div class="site-id">
+    <h1>{{ meta.title }}</h1>
+  </div>
+  <nav class="site-nav">
+    <ul>
+      {% for link in nav.links %}
+        <li>
+          <a href="{{ link.url }}">{{ link.label }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
 </header>
