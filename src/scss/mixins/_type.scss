@@ -1,0 +1,35 @@
+@use 'tokens';
+@use 'mixins/breakpoints';
+
+@mixin type(
+  $type,
+  $size,
+  $line-height: 1,
+  $letter-spacing: 0,
+  $font-weight: 400
+) {
+  --type-style: #{$type};
+  font-size: $size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+// The tokens will pass the following parameters $size, $line-height, $letter-spacing, $font-weight
+// Make sure when using tokens to use a map (tokens.$token-name...)
+
+@mixin heading-one {
+  @include type('Heading One Mobile', tokens.$type-one-mobile...);
+
+  @include breakpoints.laptop {
+    @include type('Heading One Desktop', tokens.$type-one-desktop...);
+  }
+}
+
+@mixin heading-two {
+  @include type('Heading Two Mobile', tokens.$type-two-mobile...);
+
+  @include breakpoints.laptop {
+    @include type('Heading Two Desktop', tokens.$type-two-desktop...);
+  }
+}

@@ -1,0 +1,32 @@
+@use 'tokens';
+
+// You can use this mixin for all explicit breakpoints (@include breakpoint(632px){})
+@mixin breakpoint($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @include breakpoint(tokens.$breakpoints-small) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include breakpoint(tokens.$breakpoints-medium) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @include breakpoint(tokens.$breakpoints-large) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @include breakpoint(tokens.$breakpoints-x-large) {
+    @content;
+  }
+}
