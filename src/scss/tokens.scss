@@ -4,6 +4,7 @@
 
 /* color */
 $color-white: #fff;
+$color-black: #333;
 
 /* breakpoints */
 $breakpoints-small: 768px;
@@ -38,8 +39,8 @@ $easings-in-out-circ: cubic-bezier(0.79,0.14,0.15,0.86);
 $easings-in-out-back: cubic-bezier(0.68,-0.55,0.27,1.55);
 
 /* type */
-$type-one-mobile: 48px;
-$type-one-desktop: 60px;
+$type-one-mobile: 48px, 1.25, 0.1px, 700;
+$type-one-desktop: 60px, 1.25, 0.1px, 700;
 $type-two-mobile: 36px;
 $type-two-desktop: 30px;
 $type-three-mobile: 30px;
