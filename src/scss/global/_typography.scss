@@ -1,0 +1,9 @@
+@use 'mixins/type';
+
+h1 {
+  @include type.heading-one;
+}
+
+h2 {
+  @include type.heading-two;
+}

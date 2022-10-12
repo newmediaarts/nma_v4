@@ -1,0 +1,65 @@
+@use 'tokens';
+@use 'mixins/breakpoints';
+
+@mixin grid {
+  --status: var(--grid-breakpoint-label);
+  --grid-breakpoint-label: base;
+  --grid-column-count: #{tokens.$grid-mobile-columns};
+  --grid-column-gap: #{tokens.$grid-mobile-gap};
+  --grid-container-max-width: #{tokens.$grid-mobile-max-width};
+  --grid-outer-padding: #{tokens.$grid-mobile-padding};
+
+  display: grid;
+  grid-template-columns: repeat(var(--grid-column-count), 1fr);
+  grid-gap: var(--grid-column-gap);
+  max-width: var(--grid-container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--grid-outer-padding);
+  padding-right: var(--grid-outer-padding);
+
+  @include breakpoints.tablet {
+    --grid-breakpoint-label: tablet;
+    --grid-column-count: #{tokens.$grid-tablet-columns};
+    --grid-column-gap: #{tokens.$grid-tablet-gap};
+    --grid-container-max-width: #{tokens.$grid-tablet-max-width};
+    --grid-outer-padding: #{tokens.$grid-tablet-padding};
+  }
+  @include breakpoints.laptop {
+    --grid-breakpoint-label: laptop;
+    --grid-container-max-width: #{tokens.$grid-laptop-max-width};
+  }
+  @include breakpoints.desktop {
+    --grid-breakpoint-label: desktop;
+    --grid-container-max-width: #{tokens.$grid-desktop-max-width};
+  }
+}
+
+@mixin grid-5050($reverse: false) {
+  --first-element-columns: 1 / -1;
+  --second-element-columns: 1 / -1;
+
+  @include breakpoints.tablet {
+    --first-element-columns: 1 / 7;
+    --first-element-row: 1;
+    --second-element-columns: 7 / -1;
+    --second-element-row: 1;
+
+    @if $reverse {
+      --first-element-columns: 7 / -1;
+      --second-element-columns: 1 / 7;
+    }
+  }
+
+  @include grid;
+
+  :first-child {
+    grid-column: var(--first-element-columns);
+    grid-row: var(--first-element-row, initial);
+  }
+
+  :nth-child(2) {
+    grid-column: var(--second-element-columns);
+    grid-row: var(--second-element-row, initial);
+  }
+}

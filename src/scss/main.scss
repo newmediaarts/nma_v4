@@ -1,8 +1,7 @@
-@use 'tokens';
-
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background: tokens.$color-white;
-}
+@import 'global/reset';
+@import 'global/helpers';
+@import 'global/typography';
+@import 'partials/header';
+@import 'partials/asset-5050';
+@import 'partials/single-column';
+@import 'partials/footer';

@@ -21,9 +21,18 @@ partials:
   - type: single-column
     headline: NMA Student Show
     body: Check out the student portfolios & demo reels from recent NMA graduates.
+    minHeight: 40vh
     backgroundImage:
       src: /assets/test-image.jpg
       alt: This is a test image
       mobile: /assets/test-image-2.jpg
       tablet: /assets/test-image-3.jpg
+
+  - type: asset-5050
+    imageOne:
+      src: /assets/test-image.jpg
+      alt: This is a test image
+    imageTwo:
+      src: /assets/test-image-2.jpg
+      alt: This is a test image
 ---
