@@ -1,0 +1,26 @@
+@use 'mixins/layout';
+
+.single-column {
+  @include layout.grid;
+  position: relative;
+  align-items: center;
+  min-height: var(--single-column-min-height, auto);
+}
+
+.single-column__bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.single-column__bg nma-picture::part(image) {
+  height: 100%;
+  object-fit: cover;
+}
+
+.single-column .text-stack {
+  grid-column: 2 / 12;
+}
