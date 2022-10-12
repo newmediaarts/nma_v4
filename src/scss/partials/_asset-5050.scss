@@ -1,0 +1,5 @@
+@use 'mixins/layout';
+
+.asset-5050 {
+  @include layout.grid-5050;
+}

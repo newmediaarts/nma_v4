@@ -1,0 +1,22 @@
+<div class="{{partial.type}}{% for variant in partial.variants %} {{partial.type}}--{{variant}} {%- endfor %}">
+    <nma-picture
+      {% if partial.backgroundImage.mobile %}
+        mobile="{{partial.imageOne.mobile | url}}" 
+      {% endif %}
+      {% if partial.backgroundImage.tablet %}
+        tablet="{{partial.imageOne.tablet | url }}" 
+      {% endif %}
+      src="{{partial.imageOne.src | url}}" 
+      alt="{{partial.imageOne.alt}}"
+      ></nma-picture>
+    <nma-picture
+      {% if partial.backgroundImage.mobile %}
+        mobile="{{partial.imageTwo.mobile | url}}" 
+      {% endif %}
+      {% if partial.backgroundImage.tablet %}
+        tablet="{{partial.imageTwo.tablet | url }}" 
+      {% endif %}
+      src="{{partial.imageTwo.src | url}}" 
+      alt="{{partial.imageTwo.alt}}"
+      ></nma-picture>
+</div>
