@@ -8,7 +8,7 @@
     "prod:sass": "npx sass --load-path=src/scss src/scss:_site/css",
     "watch:scripts": "npx esbuild src/js/*.js --outdir=_site/js --bundle --watch",
     "prod:scripts": "npx esbuild src/js/*.js --outdir=_site/js --bundle",
-    "dev": "npx concurrently \"npx @11ty/eleventy --serve\" \"npm run watch:sass\" \"npm run watch:scripts\" \"npm run watch:tokens\"",
+    "dev": "env NODE_ENV=dev npx concurrently \"npx @11ty/eleventy --serve\" \"npm run watch:sass\" \"npm run watch:scripts\" \"npm run watch:tokens\"",
     "build": "npm run tokens && env NODE_ENV=staging npx concurrently \"npx @11ty/eleventy --pathprefix 'nma_v4'\" \"npm run prod:sass\" \"npm run prod:scripts\"",
     "production": "npm run tokens && env NODE_ENV=production npx concurrently \"npx @11ty/eleventy\" \"npm run prod:sass\" \"npm run prod:scripts\"",
     "tokens": "node ./plugins/generate-tokens.js",
