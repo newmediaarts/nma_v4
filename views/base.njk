@@ -24,7 +24,7 @@
 
     <script src="{{'/js/main.js' | url}}" type="module"></script>
 
-    {% if prod %}
+    {% if not prod %}
     <script src="{{'/js/help.js' | url}}" type="module"></script>
     {% endif %}
   </body>
