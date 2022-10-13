@@ -1,1 +1,94 @@
-// Add things here like global scroll animations
+@use 'tokens';
+@use 'mixins/breakpoints';
+@use 'mixins/layout';
+
+:root {
+  --status: var(--grid-breakpoint-label);
+  --grid-breakpoint-label: base;
+  --grid-column-count: #{tokens.$grid-mobile-columns};
+  --grid-column-gap: #{tokens.$grid-mobile-gap};
+  --grid-container-max-width: #{tokens.$grid-mobile-max-width};
+  --grid-outer-padding: #{tokens.$grid-mobile-padding};
+
+  @include breakpoints.tablet {
+    --grid-breakpoint-label: tablet;
+    --grid-column-count: #{tokens.$grid-tablet-columns};
+    --grid-column-gap: #{tokens.$grid-tablet-gap};
+    --grid-container-max-width: #{tokens.$grid-tablet-max-width};
+    --grid-outer-padding: #{tokens.$grid-tablet-padding};
+  }
+  @include breakpoints.laptop {
+    --grid-breakpoint-label: laptop;
+    --grid-container-max-width: #{tokens.$grid-laptop-max-width};
+  }
+  @include breakpoints.desktop {
+    --grid-breakpoint-label: desktop;
+    --grid-container-max-width: #{tokens.$grid-desktop-max-width};
+  }
+}
+
+// This is styling for the help panel on staging links
+// For the most part you won't have to upate this
+.help {
+  --help-toggle-content: '+';
+  --help-options-opacity: 0;
+  --help-options-pointer-events: none;
+  --help-options-y: 8px;
+  position: fixed;
+  bottom: 25px;
+  right: 30px;
+  z-index: 99999;
+
+  &--active{
+    --help-toggle-content: '-';
+    --help-options-opacity: 1;
+    --help-options-pointer-events: all;
+    --help-options-y: 0;
+  }
+}
+
+.help__toggle{
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  border: 1px solid tokens.$color-black;
+  background: tokens.$color-white;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: 10px;
+  font-size: 20px;
+
+  &:before {
+    content: var(--help-toggle-content); 
+  }
+}
+
+.help__options{
+  opacity: var(--help-options-opacity);
+  pointer-events: var(--help-options-pointer-events);
+  transform: translateY(var(--help-options-y));
+  transition: all 0.35s tokens.$easings-in-out-back;
+  background: tokens.$color-white;
+  border: 1px solid tokens.$color-black;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.help-grid {
+  @include layout.grid;
+  position: fixed;
+  z-index: 999;
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.help-grid__column{
+  background: rgba(#eb4d4b, 0.2);
+  height: 100%;
+  width: 100%;
+}
