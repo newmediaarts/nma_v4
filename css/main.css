@@ -79,6 +79,113 @@ select {
 /* easings */
 /* type */
 /* grid */
+:root {
+  --status: var(--grid-breakpoint-label);
+  --grid-breakpoint-label: base;
+  --grid-column-count: 4;
+  --grid-column-gap: 20px;
+  --grid-container-max-width: 500px;
+  --grid-outer-padding: 16px;
+}
+@media (min-width: 1024px) {
+  :root {
+    --grid-breakpoint-label: tablet;
+    --grid-column-count: 12;
+    --grid-column-gap: 40px;
+    --grid-container-max-width: 900px;
+    --grid-outer-padding: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --grid-breakpoint-label: laptop;
+    --grid-container-max-width: 1200px;
+  }
+}
+@media (min-width: 1440px) {
+  :root {
+    --grid-breakpoint-label: desktop;
+    --grid-container-max-width: 1400px;
+  }
+}
+
+.help {
+  --help-toggle-content: "+";
+  --help-options-opacity: 0;
+  --help-options-pointer-events: none;
+  --help-options-y: 8px;
+  position: fixed;
+  bottom: 25px;
+  right: 30px;
+  z-index: 99999;
+}
+.help--active {
+  --help-toggle-content: "-";
+  --help-options-opacity: 1;
+  --help-options-pointer-events: all;
+  --help-options-y: 0;
+}
+
+.help__toggle {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  border: 1px solid #333;
+  background: #fff;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: 10px;
+  font-size: 20px;
+}
+.help__toggle:before {
+  content: var(--help-toggle-content);
+}
+
+.help__options {
+  opacity: var(--help-options-opacity);
+  pointer-events: var(--help-options-pointer-events);
+  transform: translateY(var(--help-options-y));
+  transition: all 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  background: #fff;
+  border: 1px solid #333;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-column-count), 1fr);
+  grid-gap: var(--grid-column-gap);
+  max-width: var(--grid-container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--grid-outer-padding);
+  padding-right: var(--grid-outer-padding);
+  position: fixed;
+  z-index: 999;
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.help-grid__column {
+  background: rgba(235, 77, 75, 0.2);
+  height: 100%;
+  width: 100%;
+}
+
+/* ------------------------------------------------------------------------------------ 
+    THIS IS AUTOMATICALLY GENERATED. IF YOU NEED TO CHANGE / UPDATE TOKENS USE THE JSON FILE 
+------------------------------------------------------------------------------------------ */
+/* color */
+/* breakpoints */
+/* easings */
+/* type */
+/* grid */
 h1 {
   --type-style: Heading One Mobile;
   font-size: 48px;
@@ -124,12 +231,6 @@ h2 {
 .asset-5050 {
   --first-element-columns: 1 / -1;
   --second-element-columns: 1 / -1;
-  --status: var(--grid-breakpoint-label);
-  --grid-breakpoint-label: base;
-  --grid-column-count: 4;
-  --grid-column-gap: 20px;
-  --grid-container-max-width: 500px;
-  --grid-outer-padding: 16px;
   display: grid;
   grid-template-columns: repeat(var(--grid-column-count), 1fr);
   grid-gap: var(--grid-column-gap);
@@ -145,27 +246,6 @@ h2 {
     --first-element-row: 1;
     --second-element-columns: 7 / -1;
     --second-element-row: 1;
-  }
-}
-@media (min-width: 1024px) {
-  .asset-5050 {
-    --grid-breakpoint-label: tablet;
-    --grid-column-count: 12;
-    --grid-column-gap: 40px;
-    --grid-container-max-width: 900px;
-    --grid-outer-padding: 40px;
-  }
-}
-@media (min-width: 1200px) {
-  .asset-5050 {
-    --grid-breakpoint-label: laptop;
-    --grid-container-max-width: 1200px;
-  }
-}
-@media (min-width: 1440px) {
-  .asset-5050 {
-    --grid-breakpoint-label: desktop;
-    --grid-container-max-width: 1400px;
   }
 }
 .asset-5050 :first-child {
@@ -186,12 +266,6 @@ h2 {
 /* type */
 /* grid */
 .single-column {
-  --status: var(--grid-breakpoint-label);
-  --grid-breakpoint-label: base;
-  --grid-column-count: 4;
-  --grid-column-gap: 20px;
-  --grid-container-max-width: 500px;
-  --grid-outer-padding: 16px;
   display: grid;
   grid-template-columns: repeat(var(--grid-column-count), 1fr);
   grid-gap: var(--grid-column-gap);
@@ -203,27 +277,6 @@ h2 {
   position: relative;
   align-items: center;
   min-height: var(--single-column-min-height, auto);
-}
-@media (min-width: 1024px) {
-  .single-column {
-    --grid-breakpoint-label: tablet;
-    --grid-column-count: 12;
-    --grid-column-gap: 40px;
-    --grid-container-max-width: 900px;
-    --grid-outer-padding: 40px;
-  }
-}
-@media (min-width: 1200px) {
-  .single-column {
-    --grid-breakpoint-label: laptop;
-    --grid-container-max-width: 1200px;
-  }
-}
-@media (min-width: 1440px) {
-  .single-column {
-    --grid-breakpoint-label: desktop;
-    --grid-container-max-width: 1400px;
-  }
 }
 
 .single-column__bg {
