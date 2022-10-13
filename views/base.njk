@@ -23,5 +23,9 @@
     {% endfor %}
 
     <script src="{{'/js/main.js' | url}}" type="module"></script>
+
+    {% if prod %}
+    <script src="{{'/js/help.js' | url}}" type="module"></script>
+    {% endif %}
   </body>
 </html>
